@@ -6,14 +6,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import lombok.Data;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
 @Entity
-public class CourseEnrollment {
+@Table(name = "STUDENT_COURSE")
+@Getter
+@Setter
+public class StudentCourse {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "student_id")
@@ -23,5 +28,5 @@ public class CourseEnrollment {
     @JoinColumn(name = "course_id")
     private Course course;
 
-    private Double grade;
+    private double qualification;
 }

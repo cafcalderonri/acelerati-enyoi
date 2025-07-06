@@ -1,23 +1,15 @@
--- Teachers
-INSERT INTO teacher (id, name, email) VALUES (1, 'John Doe', 'john@example.com');
-INSERT INTO teacher (id, name, email) VALUES (2, 'Jane Smith', 'jane@example.com');
+-- USUARIOS
+INSERT INTO users (id, name, email, user_type) VALUES (1, 'Juan Pérez', 'juan.perez@colegio.edu', 'TEACHER');
+INSERT INTO users (id, name, email, user_type) VALUES (2, 'Laura Gómez', 'laura.gomez@colegio.edu', 'STUDENT');
+INSERT INTO users (id, name, email, user_type) VALUES (3, 'Carlos Mendoza', 'carlos.mendoza@colegio.edu', 'STUDENT');
 
--- Students
-INSERT INTO student (id, name, email) VALUES (1, 'Alice', 'alice@example.com');
-INSERT INTO student (id, name, email) VALUES (2, 'Bob', 'bob@example.com');
+-- CURSOS
+INSERT INTO COURSES (id, name, descriptions, teacher_id) VALUES (100, 'Matemáticas', 'Curso de álgebra y aritmética', 1);
+INSERT INTO COURSES (id, name, descriptions, teacher_id) VALUES (101, 'Historia', 'Historia universal desde la antigüedad', 1);
 
--- Courses
-INSERT INTO course (id, name, description) VALUES (1, 'Math', 'Basic Math course');
-INSERT INTO course (id, name, description) VALUES (2, 'Science', 'Basic Science course');
+-- RELACIÓN CURSO - ESTUDIANTE (MANY TO MANY)
+INSERT INTO STUDENT_COURSE (id, course_id, student_id, qualification) VALUES (1, 100, 2, 3);
+INSERT INTO STUDENT_COURSE (id, course_id, student_id, qualification) VALUES (2, 100, 3, 4);
 
--- Teacher-Course associations
-INSERT INTO course_teachers (course_id, teachers_id) VALUES (1, 1);
-INSERT INTO course_teachers (course_id, teachers_id) VALUES (2, 2);
-
--- Student enrollments with grades
-INSERT INTO course_enrollment (id, course_id, student_id, grade) VALUES (1, 1, 1, 4.5);
-INSERT INTO course_enrollment (id, course_id, student_id, grade) VALUES (2, 2, 2, 3.8);
-
--- Tasks
-INSERT INTO task (id, title, description, publication_date, course_id, teacher_id) VALUES (1, 'Task 1', 'Math task', CURRENT_TIMESTAMP, 1, 1);
-INSERT INTO task (id, title, description, publication_date, course_id, teacher_id) VALUES (2, 'Task 2', 'Science task', CURRENT_TIMESTAMP, 2, 2);
+-- ANUNCIOS DE CURSOS (ONE TO MANY)
+INSERT INTO TASKS (id, course_id, title, description, publication_date) VALUES (1, 100, 'Bienvenida', 'Bienvenidos al curso de matemáticas', CURRENT_TIMESTAMP);
