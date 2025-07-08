@@ -3,6 +3,8 @@ package com.enyoi.jpa.dto;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 public class GetCoursesResponseDto {
@@ -11,5 +13,5 @@ public class GetCoursesResponseDto {
     private String teacherName;
     private String name;
     private String description;
-    private TaskDto task;
+    private List<TaskDto> taskDtos;
 }

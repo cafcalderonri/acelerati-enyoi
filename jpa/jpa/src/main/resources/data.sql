@@ -12,4 +12,6 @@ INSERT INTO STUDENT_COURSE (id, course_id, student_id, qualification) VALUES (1,
 INSERT INTO STUDENT_COURSE (id, course_id, student_id, qualification) VALUES (2, 100, 3, 4);
 
 -- ANUNCIOS DE CURSOS (ONE TO MANY)
-INSERT INTO TASKS (id, course_id, title, description, publication_date) VALUES (1, 100, 'Bienvenida', 'Bienvenidos al curso de matemáticas', CURRENT_TIMESTAMP);
+INSERT INTO TASKS (id, course_id, title, description, publication_date) VALUES (1, 100, 'Tarea 1', 'Bienvenidos al curso de matemáticas', CURRENT_TIMESTAMP);
+INSERT INTO TASKS (id, course_id, title, description, publication_date) VALUES (2, 100, 'Tarea 2', 'Bienvenidos al curso de matemáticas', CURRENT_TIMESTAMP);
+INSERT INTO TASKS (id, course_id, title, description, publication_date) VALUES (3, 100, 'Tarea 3', 'Bienvenidos al curso de matemáticas', CURRENT_TIMESTAMP);
