@@ -29,8 +29,12 @@ public class CourseController {
 
     @PostMapping
     public ResponseEntity<Void> saveNewCourse(@RequestBody CreateCourseRequestDto dto){
-        courseService.saveNewCourse(dto);
-        return new ResponseEntity<>(HttpStatus.OK);
+        try{
+            courseService.saveNewCourse(dto);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (RuntimeException ex){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
     }
 
 

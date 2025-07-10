@@ -5,7 +5,6 @@ import com.enyoi.jpa.dto.GetCoursesResponseDto;
 import com.enyoi.jpa.dto.TaskDto;
 import com.enyoi.jpa.model.Course;
 import com.enyoi.jpa.model.Task;
-import com.enyoi.jpa.model.Teacher;
 import com.enyoi.jpa.repository.CourseRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -20,15 +19,15 @@ import java.util.List;
 @Log4j2
 public class CourseService {
 
-    private final CourseRepository courseRepository;
+    private final CourseRepository courseRepository; //DEPENDENCIA
 
-    @Transactional //CUMPLE ACID
+    @Transactional
     public List<GetCoursesResponseDto> getCourses(){
-        List<Course> courses = courseRepository.findAll();
-        return mapCourses(courses); //PUEDO ACCEDER A RECURSOS LAZY PORQUE LA SESIÓN SIGUE ABIERTA.
+        List<Course> courses = courseRepository.findAll(); //ESTO LO VA A HACER COMO SI DE VERDAD ESTUVIERA ANDANDO EL CONTEXTO REAL
+        return mapCourses(courses);
     }
 
-    @Transactional //CUMPLE ACID
+    @Transactional
     public void saveNewCourse(CreateCourseRequestDto dto){
         //AQUI INICIA LA TRANSACCIÓN
         Course course = new Course();
@@ -41,7 +40,7 @@ public class CourseService {
         courseRepository.save(course); //EJECUTÉ
 
         throw new RuntimeException("ERROR PREMEDITADO");
-    } //AQUI TERMINA LA TRANSACCIÓN
+    }
 
 
     private List<GetCoursesResponseDto> mapCourses(List<Course> courses){
@@ -51,7 +50,6 @@ public class CourseService {
             dto.setId(course.getId());
             dto.setName(course.getName());
             dto.setDescription(course.getDescription());
-            dto.setName(course.getName());
             dto.setTaskDtos(mapTasks(course.getTasks()));
             responseDtos.add(dto);
         }

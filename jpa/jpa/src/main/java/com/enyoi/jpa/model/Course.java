@@ -20,7 +20,6 @@ import java.util.List;
 @Getter
 @Setter
 public class Course {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
