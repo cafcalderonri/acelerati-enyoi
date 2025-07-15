@@ -19,7 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CourseController {
 
-    private final CourseService courseService;
+    private final CourseService courseService; //CONCRETO
 
     @GetMapping
     public ResponseEntity<List<GetCoursesResponseDto>> getAllCourses(){

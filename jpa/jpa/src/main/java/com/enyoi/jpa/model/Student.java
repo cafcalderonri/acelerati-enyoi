@@ -17,5 +17,9 @@ public class Student extends User {
     @OneToMany(mappedBy = "student")
     private List<StudentCourse> coursesStudents;
 
+    // SI PUEDE MATRICULAR
+    public void matricular(Course course){
+        System.out.println("CURSO " + course.getName() + " MATRICULADO ");
+    }
 
 }
