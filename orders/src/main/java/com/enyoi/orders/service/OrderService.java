@@ -1,5 +1,6 @@
 package com.enyoi.orders.service;
 
+import com.enyoi.orders.config.EnvsFacade;
 import com.enyoi.orders.dto.ClientResponseDto;
 import com.enyoi.orders.dto.CreateNewOrderCreatingNewClientDto;
 import com.enyoi.orders.dto.GenerateNewOrderDto;
@@ -14,14 +15,15 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 @RequiredArgsConstructor
-public class OrderService {
+public class OrderService { //INYECTAR LAS DEPENDENCIAS
 
-    private final OrderRepository orderRepository;
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final OrderRepository orderRepository; //DEPENDENCIA
+    private final RestTemplate restTemplate; //DEPENDENCIA
+    private final EnvsFacade envsFacade; //DEPENDENCIA
 
     public Order createNewOrder(GenerateNewOrderDto dto){
         //GENERO LA URL
-        String url = "http://localhost:8081/api/v1/client/" + dto.getClientEmail();
+        String url = envsFacade.getClientHostEnv() + envsFacade.getClientPath() + dto.getClientEmail();
 
         //LLAMO AL MICROSERVICIO DE CLIENTES
         ResponseEntity<ClientResponseDto> responseEntityDto = restTemplate.exchange(
@@ -32,7 +34,7 @@ public class OrderService {
             ClientResponseDto bodyResponse = responseEntityDto.getBody();
             Order order = new Order();
             order.setClientId(bodyResponse.getId());
-             return orderRepository.save(order);
+            return orderRepository.save(order);
         }
 
         throw new RuntimeException("ERROR");
@@ -41,7 +43,6 @@ public class OrderService {
 
     public Order createNewOrderCreatingNewClient(CreateNewOrderCreatingNewClientDto dto){
         String url =  "http://localhost:8081/api/v1/client";
-
 
         HttpEntity<CreateNewOrderCreatingNewClientDto> request = new HttpEntity<>(dto);
 
@@ -53,8 +54,6 @@ public class OrderService {
         Order order = new Order();
         order.setClientId(bodyResponse.getId());
         return orderRepository.save(order);
-
-
     }
 
 

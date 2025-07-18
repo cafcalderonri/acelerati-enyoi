@@ -12,6 +12,10 @@ public class Calculadora {
     private String marca;
     private int horasDeCarga;
 
+    public static int sumarEstatico(int a, int b){
+        return a + b;
+    }
+
     public int sumar(int a, int b){
         return a+b;
     }
