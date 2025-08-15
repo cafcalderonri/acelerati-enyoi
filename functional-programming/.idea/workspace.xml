@@ -4,7 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36739ac5-9db4-4611-a222-bafc885cec1a" name="Changes" comment="" />
+    <list default="true" id="36739ac5-9db4-4611-a222-bafc885cec1a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/8.14.3/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/8.14.3/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/8.14.3/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/8.14.3/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/8.14.3/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/8.14.3/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/8.14.3/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/8.14.3/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/8.14.3/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/classes/java/main/com/example/demo/DemoApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/classes/java/main/com/example/demo/controller/HolaMundoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/classes/java/main/com/example/demo/entities/ProductEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/classes/java/main/com/example/demo/repository/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/classes/java/main/com/example/demo/service/AsyncService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/classes/java/main/com/example/demo/service/SyncService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/reports/problems/problems-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/resources/main/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/tmp/compileJava/compileTransaction/stash-dir/AsyncService.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/tmp/compileJava/compileTransaction/stash-dir/HolaMundoController.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/tmp/compileJava/compileTransaction/stash-dir/SyncService.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/demo/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project-reactor/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project-reactor/.idea/gradle.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,8 +75,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/functional-programming",
-    "last_opened_file_path": "C:/Users/carlos.calderonr_pra/Documents/Acelera TI/git-new/acelerati-enyoi/demo/demo"
+    "git-widget-placeholder": "feature/webflux",
+    "last_opened_file_path": "C:/Users/carlos.calderonr_pra/Documents/Acelera TI/git-new/acelerati-enyoi/webflux/demo"
   }
 }]]></component>
   <component name="RunManager">
